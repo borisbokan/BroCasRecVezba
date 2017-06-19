@@ -1,0 +1,15 @@
+Instalirati i pokrenuti sve aplikcije na jednom uredjaju
+
+(osnovna aplikcija)
+MyApplication (takodjer sam sebi salje tj u kodu ima podesen intent-filter - u MainActivity-u)
+    |
+    |      (Aplikacija 1 - ima samo prijemnik, nema activity)
+     ---- Prijemnik u MyApp1 ()
+    |
+    |	   (Aplikacija 2 - ima samo prijemnik, nema activity)	
+     ---- Prijemnik u MyApp2 
+
+
+Napomene:
+   - U onStart() metodi u MainActivity registrovati broadcastReciver(Reciver, IntentFilter);
+   - u onStop() metodi odregistrovati reciver.
